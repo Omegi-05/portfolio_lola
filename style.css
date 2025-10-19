@@ -1,0 +1,358 @@
+body {
+  background-color: rgb(255, 255, 255);
+  cursor: url("curspen2.svg") 24 24, auto;
+  margin: 0;
+}
+
+nav {
+  width: 100%;
+  display: flex;
+  box-shadow: 0px 5px 20px rgba(255, 255, 255, 0.348);
+  row-gap: 20px;
+  position: fixed;
+  box-shadow: 1 5 5px #000000;
+  backdrop-filter: blur(15px);
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.309);
+  transition: all 0.3s ease;
+  z-index: 1;
+}
+
+nav:hover {
+  background: rgba(232, 232, 232, 0.5);
+}
+
+/* pour home le texte  c'est ici*/
+.home {
+  position: relative;
+  top: 0px;
+  left: 500px;
+  color: #000000;
+  font: 2rem "Impact", sans-serif;
+  text-decoration: none;
+  position: static;
+  margin-left: 20px;
+}
+
+.home:hover {
+  color: black;
+  font: 2rem "Impact", sans-serif;
+  text-shadow: 0px 0px 20px #d75a4e;
+  transition: all 2s;
+}
+
+/* les sections*/
+section {
+  height: 80vh; /* chaque section prend toute la hauteur de la fenêtre */
+  padding: 60px 20px;
+}
+
+#accueil {
+  background: linear-gradient(184deg, #ffffff 0%, #ee8279 200%);
+  border: none;
+}
+
+#projets {
+  background: linear-gradient(0deg, #ffffff 10%, #ee8279 200%);
+}
+
+#propos {
+  background: linear-gradient(145deg, #ffffff 50%, #f6ae78 120%);
+}
+
+#contact {
+  background: linear-gradient(35deg, #ffffff 50%, #f6ae78 120%);
+}
+
+/* les bouton de la nav c'est ici*/
+.lobby {
+  border: 0;
+  line-height: 2.5;
+  padding: 0 20;
+  color: #000000;
+  text-align: center;
+  font: 1.3rem "Impact", sans-serif;
+  background: none;
+  cursor: url("curspen.svg") 24 24, pointer;
+}
+
+.lobby:hover {
+  color: #e6567a;
+  transition: all 0.4s;
+}
+
+.travaux {
+  border: 0;
+  line-height: 2.5;
+  padding: 0 20;
+  color: #000000;
+  text-align: center;
+  font: 1.3rem "Impact", sans-serif;
+  background: none;
+  cursor: url("curspen.svg") 24 24, pointer;
+}
+
+.travaux:hover {
+  color: #ee8279;
+  transition: all 0.4s;
+}
+
+.moi {
+  border: 0;
+  line-height: 2.5;
+  padding: 0 20;
+  color: #000000;
+  text-align: center;
+  font: 1.3rem "Impact", sans-serif;
+  background: none;
+  cursor: url("curspen.svg") 24 24, pointer;
+}
+
+.moi:hover {
+  color: #f6ae78;
+  transition: all 0.4s;
+}
+
+.contacte {
+  border: 0;
+  line-height: 2.5;
+  padding: 0 20;
+  color: #000000;
+  text-align: center;
+  font: 1.3rem "Impact", sans-serif;
+  background: none;
+  cursor: url("curspen.svg") 24 24, pointer;
+}
+
+.contacte:hover {
+  color: #fac478;
+  transition: all 0.4s;
+}
+
+.titreP {
+  color: #000;
+  font: 10rem "Impact", sans-serif;
+  margin-top: 30vh;
+  margin-left: 17px;
+  display: flex;
+  justify-content: center;
+  transition: all 1s;
+}
+
+.titreP:hover {
+  color: #ffffff;
+  font: 10rem "Impact", sans-serif;
+  margin-top: 30vh;
+  margin-left: 17px;
+  display: flex;
+  justify-content: center;
+  text-shadow: rgba(0, 0, 0, 0.145) 10px 9px 9px;
+  transition: all 1s;
+}
+
+.styled {
+  border: 0;
+  line-height: 2.5;
+  padding: 0 20;
+  color: #000000;
+  text-align: center;
+  text-shadow: 1px 1px 1px #000000;
+  border-radius: 50px;
+  background-color: rgba(255, 255, 255, 0.884);
+  box-shadow: inset 2px 2px 3px rgb(254, 218, 119),
+    inset -2px -2px 3px rgba(221, 42, 123);
+  width: 100px;
+  height: 40px;
+  right: 200px;
+  left: 200px;
+  cursor: url("curspen.svg") 24 24, pointer;
+}
+
+.styled:hover {
+  background-color: rgb(41, 41, 41);
+  box-shadow: inset 2px 2px 3px rgba(221, 42, 123),
+    inset -2px -2px 3px rgb(254, 218, 119);
+  transition: all 0.7s;
+  color: #ffffff;
+}
+
+.styled:active {
+  box-shadow: inset -2px -2px 3px rgba(255, 255, 255, 0.6),
+    inset 1 px 2px 3px rgba(0, 0, 0, 0.3);
+  transition: all 0.9s;
+}
+
+/*le footer links*/
+.lin:hover {
+  cursor: url("curspen.svg") 24 24, pointer;
+}
+
+.ytb:hover {
+  cursor: url("curspen.svg") 24 24, pointer;
+}
+
+.twi:hover {
+  cursor: url("curspen.svg") 24 24, pointer;
+}
+
+.git:hover {
+  cursor: url("curspen.svg") 24 24, pointer;
+}
+
+/*chargement du début juste pour prouver*/
+.loader-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #ffffff 0%, #ee8279 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.loader-wrapper.fade-out {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.loader {
+  width: 80px;
+  height: 80px;
+  border: 8px solid rgba(255, 255, 255, 0.2);
+  border-top: 8px solid #fff;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+.loader-text {
+  color: #fff;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 1.5rem;
+  margin-top: 2rem;
+  letter-spacing: 2px;
+  animation: pulse 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.progress-bar {
+  width: 300px;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  margin-top: 2rem;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: #fff;
+  width: 0%;
+  transition: width 0.3s ease;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+/*POUR A PROPOS DE MMOOIIIIIIIIIIIIII*/
+
+
+
+.gif {
+  max-height: 440px;
+  max-width: 250px;
+  border-radius: 15px;
+  overflow: hidden;
+  clip: rect(0, 130px, 90px, 0);
+  margin-left: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.perso2image {
+  background: rgba(255, 255, 255, 0.1);
+  max-height: 440px;
+  max-width: 250px;
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.087);
+  grid-column: 1;
+  grid-row: 1 / 5;
+}
+
+.perso2image:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.369);
+}
+
+/*le texte pour présenter*/
+
+@font-face {
+  font-family: "ShinGoProRegular";
+  src: url("ressource/AOTFShinGoProRegular.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.salut {
+  font: 1.3rem "Impact", sans-serif;
+}
+
+.blabla1 {
+  font-family: "ShinGoProRegular", sans-serif;
+}
+.perso3text {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.087);
+  height: 300px;
+  width: 500px;
+  top: 200px;
+}
+
+.perso3text:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.369);
+}
+
+.perso1maf {
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  transition: all 0.3s ease;
+  z-index: 0;
+}
+
+.perso1maf:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.087);
+}
+
+/* LE CAROUSSEL AUTOMATIQUE POUR PERSO */
