@@ -53,4 +53,5 @@ document.querySelectorAll('nav button[data-target]').forEach(button => {
         });
 
         //le caroussel pour perso//
-   
+
+        //Pour le Contact lorsqu'on m'envoie des robux 👉👈 nah en vrai c trop dure pour moi//
