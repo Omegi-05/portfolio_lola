@@ -1,4 +1,4 @@
-body {
+body { /*VIVEEEE LE CSS !!*/
   background-color: rgb(255, 255, 255);
   cursor: url("curspen2.svg") 24 24, auto;
   margin: 0;
@@ -151,29 +151,32 @@ section {
   transition: all 1s;
 }
 
+/*MON BOUTTTTOOONNN CCCVVVVVVVVVVVVVVVVV*/ 
 .styled {
+  font: 1.5rem "Impact", sans-serif;
   border: 0;
   line-height: 2.5;
   padding: 0 20;
   color: #000000;
   text-align: center;
-  text-shadow: 1px 1px 1px #000000;
-  border-radius: 50px;
-  background-color: rgba(255, 255, 255, 0.884);
-  box-shadow: inset 2px 2px 3px rgb(254, 218, 119),
-    inset -2px -2px 3px rgba(221, 42, 123);
-  width: 100px;
-  height: 40px;
-  right: 200px;
-  left: 200px;
+  text-shadow: 1px 1px 1px #ffffff;
+  border-radius: 20px;
+  background-color: rgba(255, 255, 255, 0.544);
+  box-shadow: inset 2px 2px 3px  #f6af7863,
+    inset -2px -2px 3px rgb(255, 255, 255);
+    width: 100%;
+    margin: auto;
   cursor: url("curspen.svg") 24 24, pointer;
+  transition: all 0.7 ease;
+  margin-bottom: 1.5rem;
 }
 
 .styled:hover {
-  background-color: rgb(41, 41, 41);
-  box-shadow: inset 2px 2px 3px rgba(221, 42, 123),
-    inset -2px -2px 3px rgb(254, 218, 119);
-  transition: all 0.7s;
+  background-color: rgba(41, 41, 41, 0.275);
+  box-shadow: inset 2px 2px 3px rgb(255, 255, 255),
+    inset -2px -2px 3px#f6af7863;
+  transition: all 0.7s ease;
+  text-shadow: 1px 1px 1px #000000;
   color: #ffffff;
 }
 
@@ -182,22 +185,129 @@ section {
     inset 1 px 2px 3px rgba(0, 0, 0, 0.3);
   transition: all 0.9s;
 }
-
+/*FIN DEEE MON BOUTTTTOOONNN CCCVVVVVVVVVVVVVVVVV*/ 
 /*le footer links*/
-.lin:hover {
-  cursor: url("curspen.svg") 24 24, pointer;
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  gap: 20px; 
+  padding: 30px 20px;
+  margin-top: auto;
 }
 
+#sociaux {
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  gap: 15px; 
+}
+
+#sociaux img{
+  height: 80px; /* Ajustez la taille selon vos besoins */
+  width: auto;
+  justify-content: space-between;
+}
+
+
+#sociaux img:hover{
+  transform: scale(1.2);
+  transition: all 1s;
+} 
+
+.Copyright {
+text-align: center;
+  margin: 0;
+  color: #585858; /* Ajustez la couleur selon votre design */
+  font-size: 14px;
+}
+
+.lin {
+cursor: url("curspen.svg") 24 24, pointer;
+opacity: 10%;
+filter: blur(1px);
+}
+.lin:hover {
+cursor: url("curspen.svg") 24 24, pointer;
+opacity: 100%;
+filter:none;
+}
+
+.ytb {
+cursor: url("curspen.svg") 24 24, pointer;
+opacity: 10%;
+filter: blur(1px);
+}
 .ytb:hover {
   cursor: url("curspen.svg") 24 24, pointer;
+  opacity: 100%;
+  filter:none; 
 }
 
+.twi {
+cursor: url("curspen.svg") 24 24, pointer;
+opacity: 10%;
+filter: blur(1px);
+}
 .twi:hover {
   cursor: url("curspen.svg") 24 24, pointer;
+  opacity: 100%;
+  filter:none; 
 }
 
+.git {
+cursor: url("curspen.svg") 24 24, pointer;
+opacity: 10%;
+filter: blur(1px);
+}
 .git:hover {
   cursor: url("curspen.svg") 24 24, pointer;
+  opacity: 100%;
+  filter:none; 
+}
+
+.ben {
+cursor: url("curspen.svg") 24 24, pointer;
+opacity: 10%;
+filter: blur(1px);
+}
+.ben:hover {
+  cursor: url("curspen.svg") 24 24, pointer;
+  opacity: 100%;
+  filter:none; 
+}
+
+.beh {
+cursor: url("curspen.svg") 24 24, pointer;
+opacity: 10%;
+filter: blur(1px);
+}
+.beh:hover {
+  cursor: url("curspen.svg") 24 24, pointer;
+  opacity: 100%;
+  filter:none; 
+}
+
+.ins {
+cursor: url("curspen.svg") 24 24, pointer;
+opacity: 10%;
+filter: blur(1px);
+}
+.ins:hover {
+  cursor: url("curspen.svg") 24 24, pointer;
+  opacity: 100%;
+  filter:none; 
+}
+
+.cod {
+cursor: url("curspen.svg") 24 24, pointer;
+opacity: 10%;
+filter: blur(1px);
+}
+.cod:hover {
+  cursor: url("curspen.svg") 24 24, pointer;
+  opacity: 100%;
+  filter:none; 
 }
 
 /*chargement du début juste pour prouver*/
@@ -355,4 +465,155 @@ section {
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.087);
 }
 
-/* LE CAROUSSEL AUTOMATIQUE POUR PERSO */
+/* LE MAIL POUR CONTACCCCCTTTTTTTTTTTTTTTTTTTTTTTTTTTT */
+.contact-section { /* le titre */
+            background: rgba(255, 255, 255, 0.391);
+            padding: 3rem;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+        }
+
+        .contact-section h2 { /* le sous titre*/
+            color: #000000;
+            font: 2.5rem "Impact", sans-serif;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        .contact-section p { /*same hein */
+            color: #666;
+            text-align: center;
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
+            font-family: "ShinGoProRegular", sans-serif;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label { /* les ptists titres */
+            display: block;
+            color: #f6af78db;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            font: 1rem "Impact", sans-serif;
+        }
+
+        .form-group input,
+        .form-group textarea { /* les blocs, contours */
+            width: 100%;
+            padding: 1rem;
+            border: 2px solid #f6af7863;
+            border-radius: 10px;
+            font-size: 1rem;
+            font-family: "ShinGoProRegular", sans-serif;
+            transition: all 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus { /*lorsqu'on selectionne*/
+            outline: none;
+            border-color: #f6af78;
+            box-shadow: 0 0px 15px rgb(255, 190, 139);
+        }
+
+        .form-group textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        .btn-submit { /*le grooooos bouton pour envoyer mdr*/
+            width: 100%;
+            padding: 1rem;
+            background: linear-gradient(135deg, #ea6666 0%, #f6af78db 100%);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font: 1.5rem "Impact", sans-serif;
+            cursor: url("curspen.svg") 24 24, pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn-submit:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+            background: linear-gradient(135deg, #ff5959 0%, #ffa35ddb 100%);
+        }
+
+        .btn-submit:active {
+            transform: translateY(0);
+        }
+
+        .contact-info { /*trait qui sépare*/
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 2px solid #e0e0e0;
+            text-align: center;
+        }
+
+        .contact-info h3 {
+            color: #ffd3b1db;
+            margin-bottom: 1rem;
+        }
+
+        .contact-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .contact-link { /*mes 2 ptit contact*/
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #666;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            font-family: "ShinGoProRegular", sans-serif;
+        }
+
+        .contact-link:hover { /*mes 2 ptit contact*/
+            background: #f5f5f5;
+            color: #ea6666;
+            cursor: url("curspen.svg") 24 24, pointer;
+        }
+
+        .success-message {
+            background: #ea6666;
+            color: white;
+            padding: 1rem;
+            border-radius: 10px;
+            margin-bottom: 1rem;
+            display: none;
+            text-align: center;
+        }
+
+        .success-message.show {
+            display: block;
+            animation: slideIn 0.3s ease;
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 600px) {
+            .contact-section {
+                padding: 2rem 1.5rem;
+            }
+
+            .contact-section h2 {
+                font-size: 2rem;
+            }
+        }
