@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <!--le hibou favicon-->
-  <head><link rel="icon" type="image/png" href="./omegart.png"></head>
+  <head><link rel="icon" type="image/png" href="/omegart.png"></head>
 
   <header>
   <title>Lola_Portfolio</title>
@@ -20,7 +20,7 @@
 </nav>
 
 </header>
- 
+
 
   <body>
         <!--chargéééééé chargéééé-->
@@ -33,7 +33,7 @@
         </div>
 
 <section id="accueil">
-  <h1 class="titreP">P o r t f o l i o</h1> <!--mdrrr c mort je met pas de phrase d'accroche 😭-->
+  <h1 class="titreP">P o r t f o l i o</h1> <!--mdrrr c mort je met pas de phrase d'accroche-->
 
 <!--<p id="accroche">Je ne suis pas Designer, ni UI/UX et ni Artiste.<br>Je suis Lola</br></p>-->
 </section>
@@ -55,49 +55,77 @@ Je suis actuellement en recherche d'une alternance en
 Design Digitale à partir de septembre 2025.<br>
 Je suis passionnée par l'art en lui-même et je maîtrise les outils numériques comme les suites Adobe,  illustration, logo.. , Figma, des visuels en 2D ou 3D,  ou de la 
 Programmation et je dessine à main libre !</p>
- </div>
+  </div>
 
 </section>
 
+<section id="contact"> <!-- partie contact icic, footer, le mail qui marche pas mais az c pour faire genre un ptit style 😭😭-->
+   <button class="styled" type="button" onclick="GetResume()">Mon CV</button>
+   <div class="contact-section">
 
+        <h2>✦ Contactez-moi✦</h2>
 
-<section id="contact">
-  <h1>Contactez-moi</h1>
-<button class="styled" type="button" onclick="GetResume()">Mon CV</button>
- <footer>
-        <div class="sociaux">
+        <form id="contactForm"> <!-- etage 1-->
+            <div class="form-group">
+                <label for="name">Nom complet *</label>
+                <input type="text" id="name" name="name" required placeholder="ScoobyDoo">
+            </div>
 
-          <a href="https://www.linkedin.com/in/lola-0thon/" target="_blank">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" style="vertical-align: middle;"></svg>
-                <img class="lin" src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/linkedin.svg" alt="linkedin" width="80" height="80">
-          </a>
+            <div class="form-group">  <!-- etage 2-->
+                <label for="email">Email *</label>
+                <input type="email" id="email" name="email" required placeholder="scooby@doo.com">
+            </div>
 
-            <a href="https://www.youtube.com/@oggy5290" target="_blank">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" style="vertical-align: middle;"></svg>
-                <img class="ytb" src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/youtube.svg" alt="youtube" width="80" height="80">
-            </a>
+            <div class="form-group">  <!-- etage 3-->
+                <label for="subject">Objet</label>
+                <input type="text" id="subject" name="subject" placeholder="titre...">
+            </div>
 
-            <a href="https://x.com/0MEGI_" target="_blank">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" style="vertical-align: middle;"></svg>
-                <img class="twi" src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/x.svg" alt="x" width="80" height="80">
-            </a>
+            <div class="form-group">  <!-- etage 4 -->
+                <label for="message">Message *</label>
+                <textarea id="message" name="message" required placeholder="Ou est mon donnut sucré au sucre.."></textarea>
+            </div>
 
-            <a href="https://github.com/Omegi-05" target="_blank">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" style="vertical-align: middle;"></svg>
-                <img class="git" src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/github.svg" alt="GitHub" width="80" height="80">
-            </a>
+            <button type="submit" class="btn-submit">Envoyer le message</button> <!-- gros bouton-->
+        </form>
 
+        <div class="contact-info">
+            <div class="contact-links">
+                <a href="mailto:lola.othon@example.com" class="contact-link"> <!-- mon mail -->
+                    ✉ lola.othon@edu.gobelins.fr ✉
+                </a>
+                <a href="tel:+33612345678" class="contact-link"> <!-- mon num  -->
+                    ☏ +33 07 62 67 41 18 ☏
+                </a>
+            </div>
         </div>
+    </div>
 
+    <footer>
+        <div id="sociaux">
+            
+            <a href="https://www.linkedin.com/in/lola-0thon/" target="_blank"><img class="lin" src="logo/link_noir.svg" alt="linkedin" width="80" height="80"></a>
+
+            <a href="https://www.youtube.com/@oggy5290" target="_blank"><img class="ytb" src="logo/yt_noir.svg" alt="youtube" width="80" height="80"></a>
+
+            <a href="https://x.com/0MEGI_" target="_blank"><img class="twi" src="logo/twitter_noir.svg" alt="x" width="80" height="80"></a>
+
+            <a href="https://www.instagram.com/delt4_02/" target="_blank"><img class="ins" src="logo/insta_noir.svg" alt="Insta" width="80" height="80"></a>
+
+            <a href="https://bento.me/omegart" target="_blank"><img class="ben" src="logo/bento_noir.svg" alt="bento" width="80" height="80"></a>
+
+            <a href="https://github.com/Omegi-05" target="_blank"><img class="git" src="logo/git_noir.svg" alt="GitHub" width="80" height="80"></a>
+
+            <a href="https://codepen.io/xX-Oggy-Xx" target="_blank"><img class="cod" src="logo/code_noir.svg" alt="Codepen" width="80" height="80"></a>
+
+            <a href="https://www.behance.net/lolaothon#" target="_blank"><img class="beh" src="logo/beha_noir.svg" alt="behance" width="80" height="80"></a>
+        </div>
+        <p class="Copyright">Copyright © 2025 OTHON Lola. Tous droits réservés. ☝🤓</p>
     </footer>
 <!--sa fait bientot plus d'une semaine que je suis dessus-->
 </section>
 
 </body>
 </html>
-
-
-
-
 
 
