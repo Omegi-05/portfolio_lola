@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <!--le hibou favicon-->
-  <head><link rel="shortcut icon" type="image/png" href="./omegart.png"></head>
+  <head><link rel="shortcut icon" type="image/png" href="omegart.png"></head>
 
   <header>
   <title>Lola_Portfolio</title>
@@ -14,8 +14,8 @@
 <nav>
   <p href="top" class="home">OTHON Lola</p>
   <button class="lobby" onclick="document.getElementById('accueil').scrollIntoView({ behavior: 'smooth' })">Accueil</button>
+    <button class="moi" onclick="document.getElementById('propos').scrollIntoView({ behavior: 'smooth' })">À propos</button>
   <button class="travaux" onclick="document.getElementById('projets').scrollIntoView({ behavior: 'smooth' })">Projets</button>
-  <button class="moi" onclick="document.getElementById('propos').scrollIntoView({ behavior: 'smooth' })">À propos</button>
   <button class="contacte" onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })">Contact</button>
 </nav>
 
@@ -38,30 +38,59 @@
 <!--<p id="accroche">Je ne suis pas Designer, ni UI/UX et ni Artiste.<br>Je suis Lola</br></p>-->
 </section>
 
+<section id="propos">
+
+  <!-- <img id="perso2image" class="gif" src="moicorps.gif">
+  <img id="cactus" class="gif2" src="img_gif/cactus.gif" width="250">
+  <img id="plante" class="gif2" src="img_gif/plante.gif" width="150"> -->
+  
+  </div> 
+        <div class="grid-container">
+            <!-- Bloc Large -->
+            <div class="portfolio-item item-large">
+              <h3 class="salut">Salutation !</h3>
+                <p class="blabla1">Je m'appelle Lola Othon, j'ai 19 ans et je suis étudiante en formation 2024/2027 en DNMADE à GOBELINS Paris.
+Je suis actuellement en recherche d'une alternance en 
+Design Digital imédiatement.<br>
+Je suis passionnée par l'art en lui-même et je maîtrise les outils numériques comme les suites Adobe,  illustration, logo.. , Figma, des visuels en 2D ou 3D,  ou de la 
+Programmation et je dessine à main libre !</p>
+            </div>
+
+            <!-- Blocs Tall -->
+            <div class="portfolio-item item-tall">
+                <img src="moicorps.gif" alt="Projet 2" class="portfolio-image">
+            </div>
+
+            <div class="portfolio-item item-tall">
+<a href="https://www.apprentis-auteuil.org/actualites/temoignages/lola-17-ans-linternat-ma-rendue-plus-sure-de-moi?utm_source=canva&utm_medium=iframely" target="_blank"><img src="img_gif/matete.png" alt="Projet 3" class="portfolio-image" id="magrossetete"></a>
+                <div class="portfolio-overlay">
+                    <div class="portfolio-category">Mon Parcours</div>
+                    <p class="portfolio-description">Lola, 17 ans : « L'internat m'a rendue plus sûre de moi ! »</p>
+                </div>
+            </div>
+
+            <!-- Blocs Wide -->
+            <div class="portfolio-item item-wide">
+                <img src="img_gif/cactus.gif" alt="Projet 4" class="portfolio-image">
+            </div>
+
+            <div class="portfolio-item item-wide">
+                <img src="img_gif/plante.gif" alt="Projet 5" class="portfolio-image">
+            </div>
+
+
+</section>
+
+
 <section id="projets">
   <h1>Mes projets</h1>
   <p>Présentation de projets...</p>
 </section>
 
-<section id="propos">
-
-  <div class="perso1maf">caroussel...</div>
-
-  <div class="perso2image"><img class="gif" src="moicorps.gif"></div>
-  <div class="perso3text">
-<h3 class="salut">Salutation !</h3>
-  <p class="blabla1">Je m'appelle Lola Othon, j'ai 19 ans et je suis étudiante en formation 2024/2027 en DNMADE à GOBELINS Paris.
-Je suis actuellement en recherche d'une alternance en 
-Design Digitale à partir de septembre 2025.<br>
-Je suis passionnée par l'art en lui-même et je maîtrise les outils numériques comme les suites Adobe,  illustration, logo.. , Figma, des visuels en 2D ou 3D,  ou de la 
-Programmation et je dessine à main libre !</p>
-  </div>
-
-</section>
-
+<!-- CONTACT FINI ICI -->
 <section id="contact"> <!-- partie contact icic, footer, le mail qui marche pas mais az c pour faire genre un ptit style 😭😭-->
-   <button class="styled" type="button" onclick="GetResume()">Mon CV</button>
-   <div class="contact-section">
+  <button class="styled" type="button" onclick="GetResume()">Mon CV</button>
+  <div class="contact-section">
 
         <h2>✦ Contactez-moi✦</h2>
 
@@ -127,8 +156,5 @@ Programmation et je dessine à main libre !</p>
 
 </body>
 </html>
-
-
-
 
 
