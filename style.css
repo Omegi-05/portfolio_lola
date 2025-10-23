@@ -12,7 +12,7 @@ nav {
   position: fixed;
   box-shadow: 1 5 5px #000000;
   backdrop-filter: blur(15px);
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   background: rgba(255, 255, 255, 0.309);
   transition: all 0.3s ease;
@@ -53,11 +53,11 @@ section {
   border: none;
 }
 
-#projets {
+#propos {
   background: linear-gradient(0deg, #ffffff 10%, #ee8279 200%);
 }
 
-#propos {
+#projets {
   background: linear-gradient(145deg, #ffffff 50%, #f6ae78 120%);
 }
 
@@ -186,41 +186,7 @@ section {
   transition: all 0.9s;
 }
 /*FIN DEEE MON BOUTTTTOOONNN CCCVVVVVVVVVVVVVVVVV*/ 
-/*le footer links*/
-footer {
-  display: flex;
-  flex-direction: column;
-  align-items: center; 
-  gap: 20px; 
-  padding: 30px 20px;
-  margin-top: auto;
-}
 
-#sociaux {
-  display: flex;
-  justify-content: center; 
-  align-items: center; 
-  gap: 15px; 
-}
-
-#sociaux img{
-  height: 80px; /* Ajustez la taille selon vos besoins */
-  width: auto;
-  justify-content: space-between;
-}
-
-
-#sociaux img:hover{
-  transform: scale(1.2);
-  transition: all 1s;
-} 
-
-.Copyright {
-text-align: center;
-  margin: 0;
-  color: #585858; /* Ajustez la couleur selon votre design */
-  font-size: 14px;
-}
 
 .lin {
 cursor: url("curspen.svg") 24 24, pointer;
@@ -388,8 +354,6 @@ filter: blur(1px);
 
 /*POUR A PROPOS DE MMOOIIIIIIIIIIIIII*/
 
-
-
 .gif {
   max-height: 440px;
   max-width: 250px;
@@ -401,11 +365,7 @@ filter: blur(1px);
   align-items: center;
 }
 
-.perso2image {
-  background: rgba(255, 255, 255, 0.1);
-  max-height: 440px;
-  max-width: 250px;
-  backdrop-filter: blur(10px);
+#perso2image {
   border-radius: 15px;
   overflow: hidden;
   transition: all 0.3s ease;
@@ -414,7 +374,45 @@ filter: blur(1px);
   grid-row: 1 / 5;
 }
 
-.perso2image:hover {
+#perso2image:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.369);
+}
+
+/*plante et cactus*/
+.gif2 {
+  border-radius: 15px;
+  overflow: hidden;
+  clip: rect(0, 130px, 90px, 0);
+  margin-left: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+#plante {
+  border-radius: 15px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.087);
+  grid-column: 1;
+  grid-row: 1 / 5;
+}
+
+#plante:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.369);
+}
+
+#cactus {
+  border-radius: 15px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.087);
+  grid-column: 1;
+  grid-row: 1 / 5;
+}
+
+#cactus:hover {
   transform: translateY(-5px);
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.369);
 }
@@ -466,7 +464,7 @@ filter: blur(1px);
 }
 
 /* LE MAIL POUR CONTACCCCCTTTTTTTTTTTTTTTTTTTTTTTTTTTT */
-.contact-section { /* le titre */
+.contact-section { /* le titre, bloc blanc */
             background: rgba(255, 255, 255, 0.391);
             padding: 3rem;
             border-radius: 20px;
@@ -498,6 +496,7 @@ filter: blur(1px);
             font-weight: 600;
             margin-bottom: 0.5rem;
             font: 1rem "Impact", sans-serif;
+            cursor: url("curspen2.svg") 24 24, pointer;
         }
 
         .form-group input,
@@ -617,3 +616,39 @@ filter: blur(1px);
                 font-size: 2rem;
             }
         }
+
+        /*le footer links*/
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  gap: 20px; 
+  padding: 30px 20px;
+  margin-top: auto;
+}
+
+#sociaux {
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  gap: 15px; 
+}
+
+#sociaux img{
+  height: 80px; /* Ajustez la taille selon vos besoins */
+  width: auto;
+  justify-content: space-between;
+}
+
+
+#sociaux img:hover{
+  transform: scale(1.2);
+  transition: all 1s;
+} 
+
+.Copyright {
+text-align: center;
+  margin: 0;
+  color: #585858; /* Ajustez la couleur selon votre design */
+  font-size: 14px;
+}
