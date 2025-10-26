@@ -12,7 +12,7 @@
 <!--YOOOO à la personne qui inspecte mon code, je te vois gros looser 😂-->
 
 <nav>
-  <p href="top" class="home">OTHON Lola</p>
+  <button href="top" id="home" class="lobby" onclick="document.getElementById('accueil').scrollIntoView({ behavior: 'smooth' })">OTHON Lola</button>
   <button class="lobby" onclick="document.getElementById('accueil').scrollIntoView({ behavior: 'smooth' })">Accueil</button>
     <button class="moi" onclick="document.getElementById('propos').scrollIntoView({ behavior: 'smooth' })">À propos</button>
   <button class="travaux" onclick="document.getElementById('projets').scrollIntoView({ behavior: 'smooth' })">Projets</button>
@@ -33,27 +33,29 @@
         </div>
 
 <section id="accueil">
-  <h1 class="titreP">P o r t f o l i o</h1> <!--mdrrr c mort je met pas de phrase d'accroche-->
-
+<div class="tremblement">
+     <span>P</span><span>o</span>
+          <span>r</span><span>t</span>
+          <span>f</span><span>o</span>
+          <span>l</span><span>i</span><span>o</span>
+        </div>
+    <!--<h1 class="titreP">P o r t f o l i o</h1> mdrrr c mort je met pas de phrase d'accroche-->
 <!--<p id="accroche">Je ne suis pas Designer, ni UI/UX et ni Artiste.<br>Je suis Lola</br></p>-->
 </section>
 
 <section id="propos">
 
-  <!-- <img id="perso2image" class="gif" src="moicorps.gif">
-  <img id="cactus" class="gif2" src="img_gif/cactus.gif" width="250">
-  <img id="plante" class="gif2" src="img_gif/plante.gif" width="150"> -->
-  
-  </div> 
+</div> 
         <div class="grid-container">
             <!-- Bloc Large -->
             <div class="portfolio-item item-large">
-              <h3 class="salut">Salutation !</h3>
+                <h3 class="salut">Salutation !</h3>
                 <p class="blabla1">Je m'appelle Lola Othon, j'ai 19 ans et je suis étudiante en formation 2024/2027 en DNMADE à GOBELINS Paris.
 Je suis actuellement en recherche d'une alternance en 
 Design Digital imédiatement.<br>
-Je suis passionnée par l'art en lui-même et je maîtrise les outils numériques comme les suites Adobe,  illustration, logo.. , Figma, des visuels en 2D ou 3D,  ou de la 
-Programmation et je dessine à main libre !</p>
+<br>
+Je suis passionnée par l'art en lui-même et je maîtrise les outils numériques comme les suites Adobe, Figma, des visuels en 2D ou 3D, et aussi de la 
+Programmation.</p>
             </div>
 
             <!-- Blocs Tall -->
@@ -64,7 +66,7 @@ Programmation et je dessine à main libre !</p>
             <div class="portfolio-item item-tall">
 <a href="https://www.apprentis-auteuil.org/actualites/temoignages/lola-17-ans-linternat-ma-rendue-plus-sure-de-moi?utm_source=canva&utm_medium=iframely" target="_blank"><img src="img_gif/matete.png" alt="Projet 3" class="portfolio-image" id="magrossetete"></a>
                 <div class="portfolio-overlay">
-                    <div class="portfolio-category">Mon Parcours</div>
+                    <div class="portfolio-category">Mon Parcours au Lycée</div>
                     <p class="portfolio-description">Lola, 17 ans : « L'internat m'a rendue plus sûre de moi ! »</p>
                 </div>
             </div>
@@ -78,17 +80,53 @@ Programmation et je dessine à main libre !</p>
                 <img src="img_gif/plante.gif" alt="Projet 5" class="portfolio-image">
             </div>
 
+            <div class="portfolio-item item-tall2">
+<a href="https://bookdemonmaf.my.canva.site/lola-maf-2023" target="_blank"><img src="img_gif/mafminia.png" alt="Projet 3" class="portfolio-image" id="magrossetete"></a>
+                <div class="portfolio-overlay">
+                    <div class="portfolio-category">MAF</div>
+                    <p class="portfolio-description">Lola, Meilleurs Apprentis de France 2023</p>
+                </div>
+            </div>
 
 </section>
 
 
 <section id="projets">
-  <h1>Mes projets</h1>
-  <p>Présentation de projets...</p>
+ <!--  <h1>Mes projets</h1>
+  <p>Présentation de projets...</p> 
+  Merci Logto pour ce tips de caroussel full CSS-->
+<div class="carousel">
+  <div class="group">
+    <div class="card"><img class="dessins" src="img_gif/dessin1.jpg" alt="dessin1"></div>
+    <div class="card"><img class="dessins" src="img_gif/dessin2.jpg" alt="dessin2"></div>
+    <div class="card"><img class="dessins" src="img_gif/dessin3.jpg" alt="dessin3"></div>
+    <div class="card"><img class="dessins" src="img_gif/dessin4.jpg" alt="dessin4"></div>
+    <div class="card"><img class="dessins" src="img_gif/dessin5.jpg" alt="dessin5"></div>
+    <div class="card"><img class="dessins" src="img_gif/dessin6.jpg" alt="dessin6"></div>
+    <div class="card"><img class="dessins" src="img_gif/dessin7.jpg" alt="dessin7"></div>
+    <div class="card"><img class="dessins" src="img_gif/dessin8.jpg" alt="dessin8"></div>
+    <div class="card"><img class="dessins" src="img_gif/dessin9.jpg" alt="dessin9"></div>
+    <div class="card"><img class="dessins" src="img_gif/dessin10.jpg" alt="dessin10"></div>
+</div>
+  <!-- Ajoutez `aria-hidden` pour masquer les cartes dupliquées aux lecteurs d'écran. -->
+  <div aria-hidden class="group">
+    <div class="card"><img class="dessins" src="img_gif/dessin1.jpg" alt="dessin1"></div>
+    <div class="card"><img class="dessins" src="img_gif/dessin2.jpg" alt="dessin2"></div>
+    <div class="card"><img class="dessins" src="img_gif/dessin3.jpg" alt="dessin3"></div>
+    <div class="card"><img class="dessins" src="img_gif/dessin4.jpg" alt="dessin4"></div>
+    <div class="card"><img class="dessins" src="img_gif/dessin5.jpg" alt="dessin5"></div>
+    <div class="card"><img class="dessins" src="img_gif/dessin6.jpg" alt="dessin6"></div>
+    <div class="card"><img class="dessins" src="img_gif/dessin7.jpg" alt="dessin7"></div>
+    <div class="card"><img class="dessins" src="img_gif/dessin8.jpg" alt="dessin8"></div>
+    <div class="card"><img class="dessins" src="img_gif/dessin9.jpg" alt="dessin9"></div>
+    <div class="card"><img class="dessins" src="img_gif/dessin10.jpg" alt="dessin10"></div>
+</div>
+</div> <!--fin du caroussel-->
+
 </section>
 
 <!-- CONTACT FINI ICI -->
-<section id="contact"> <!-- partie contact icic, footer, le mail qui marche pas mais az c pour faire genre un ptit style 😭😭-->
+<section id="contact"> <!-- partie contact ici, footer, le mail qui marche pas mais az c pour faire genre un ptit style 😭😭-->
   <button class="styled" type="button" onclick="GetResume()">Mon CV</button>
   <div class="contact-section">
 
