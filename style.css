@@ -47,24 +47,27 @@ nav:hover {
 /* les sections*/
 section {
   height: 80vh; /* chaque section prend toute la hauteur de la fenêtre */
-  padding: 60px 20px;
 }
 
 #accueil {
   background: linear-gradient(184deg, #ffffff 0%, #ee8279 200%);
   border: none;
+  padding: 60px 20px;
 }
 
 #propos {
   background: linear-gradient(0deg, #ffffff 10%, #ee8279 200%);
+    padding: 60px 20px;
 }
 
 #projets {
   background: linear-gradient(145deg, #ffffff 50%, #f6ae78 120%);
+    padding: 60px 20px 600px;
 }
 
 #contact {
   background: linear-gradient(35deg, #ffffff 50%, #f6ae78 120%);
+    padding: 60px 20px;
 }
 
 /* les bouton de la nav c'est ici*/
@@ -132,12 +135,12 @@ section {
   transition: all 0.4s;
 }
 /*LE TITRE PORTFOLIO*/
- .tremblement {
+.tremblement {
   display: flex;
   justify-content: center;
-   margin-top: 30vh;
-  margin-left: 17px;
- }
+  margin-top: 30vh;
+  margin-left: 100px;
+}
 .tremblement span{
     transition: all 500ms;
     color: rgb(0, 0, 0);
@@ -543,13 +546,18 @@ section {
 }
 
 /* DEBUT CAROUSSEL POUR PROJEEEEEEEEEEEEEEEEEEEEEEET */
+.titri {
+  font: 3rem "Impact", sans-serif;
+  color: #000;
+}
 /*source : Logto sur google*/ 
   .carousel {
-    margin: auto;
+    top: 0;
     padding: 20px 0;
     max-width: 100%;
     overflow: hidden;
     display: flex;
+    margin-bottom: 200px;
   }
 
   .card:hover {
@@ -558,11 +566,6 @@ section {
   transition: all ease-in-out 0.3s;
   }
 
-    .card:click {
-  transform: translateY(-3px);
-  box-shadow: rgb(81, 255, 0) 5px 5px 20px 0;
-  transition: all ease-in-out 0.6s;
-  }
   .card {
     width:100%;
     color: white;
@@ -612,7 +615,7 @@ section {
 
   .group {
     will-change: transform; 
-    animation: scrolling 10s linear infinite;
+    animation: scrolling 60s linear infinite;
   }
 
   @keyframes scrolling {
@@ -632,10 +635,230 @@ section {
 
   }
 
+/*TOUJOURS DANS PRROOJEEEEEEEEEEEEEEEEEEEEEEEEEEEEET*/
+/*présenter 3 projets pas plus*/
+  .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+            color: white;
+            font: 3rem "Impact", sans-serif;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            font: 1em impsans-serif;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: rgba(255,255,255,0.9);
+            font-size: 1.2em;
+            margin-bottom: 50px;
+        }
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .project-card {
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            background: rgba(255, 255, 255, 0.267);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+            cursor: url("curspen.svg") 24 24, pointer;
+        }
+
+        .project-image { /*la minia du bouton*/
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            background-color: #F7F7F8;            
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4em;
+        }
+
+        .project-preview {
+            padding: 15px;
+        }
+
+        .project-title { /* titre */
+            font: 1.5rem "Impact", sans-serif;
+            color: #000000;
+        }
+
+        .project-summary { /*texte*/
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 15px;
+            font-family: "ShinGoProRegular", sans-serif;
+        }
+
+        .view-more {  /* text voir plus */
+            display: inline-block;
+            color: #E6567A;
+            font-weight: 600;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            font: 1.2rem "Impact", sans-serif;
+
+        }
+
+        .view-more:hover {
+            color: #ff0040;
+        }
+
+        /* Modal pour les détails */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.8);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            animation: fadeIn 0.3s ease;
+            font: 1rem "Impact", sans-serif;
+        }
+
+        .modal.active {
+            display: flex;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .modal-content {
+            background: white;
+            border-radius: 20px;
+            max-width: 900px;
+            width: 100%;
+            max-height: 90vh;
+            overflow-y: auto;
+            position: relative;
+            animation: slideUp 0.4s ease;
+        }
+
+        @keyframes slideUp {
+            from {
+                transform: translateY(50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .modal-header {
+            position: relative;
+            height: 300px;
+            background-color: #ffffff;            
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 5em;
+            color: white;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 40px;
+            height: 40px;
+            background:  #ffc3be;
+            border: none;
+            border-radius: 50%;
+            font-size: 24px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.2s ease;
+            z-index: 10;
+        }
+
+        .close-btn:hover {
+            transform: rotate(90deg);
+            background: #EE8279;
+            transition: all ease-in 0.6s;
+            cursor: url("curspen.svg") 24 24, pointer;
+            color: #ffffff;
+        }
+
+        .modal-body {
+            padding: 40px;
+        }
+
+        .modal-title {
+            font-size: 2.5em;
+            color: #000000;
+            margin-bottom: 20px;
+        }
+
+        .modal-meta {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+
+        .meta-item { /*supprimé*/
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: #ff0000;
+            font-size: 0.95em;
+        }
+
+        .modal-description {
+            color: #252525;
+            line-height: 1.8;
+            font-size: 1.1em;
+            margin-bottom: 30px;
+            font-family: "ShinGoProRegular", sans-serif;
+        }
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 30px;
+        }
+
+        .tag /*les types en mode pokémon*/{
+          border: solid 1px #000;
+            background: linear-gradient(135deg, #ffbeb8 0%, #ffd4b3 100%);
+            color: rgb(0, 0, 0);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9em;
+        }
+
 /* FIN POUR PROJEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEET */
 
 /* LE MAIL POUR CONTACCCCCTTTTTTTTTTTTTTTTTTTTTTTTTTTT */
-
 .contact-section {
   /* le titre, bloc blanc */
   background: rgba(255, 255, 255, 0.391);
