@@ -17,7 +17,7 @@ nav {
   align-items: center;
   background: rgba(255, 255, 255, 0.309);
   transition: all 0.3s ease;
-  z-index: 1;
+  z-index: 5;
   height: 100px;
 }
 
@@ -134,19 +134,75 @@ section {
   color: #fac478;
   transition: all 0.4s;
 }
+
+/*Drag des images*/ 
+.stage {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    margin: 0px;
+    background: #ffffff00;
+    user-select: none;
+    border: none;
+    z-index: 2;
+}
+
+.nerdya {
+  position: absolute;
+    object-fit: cover;
+    cursor: url("curspen.svg") 24 24, pointer;
+  display: flex;
+  animation: nerdya ease-in-out infinite;
+}
+
+.nerdya:hover {
+  cursor: url("curspen.svg") 24 24, pointer;
+  animation: nerdya 1.5s infinite;
+}
+
+@keyframes nerdya {
+  100% {
+    transform: rotate(0deg);
+  }
+  0% {
+    transform: rotate(360deg);
+  }
+}
+
+.nerdy {
+  position: absolute;
+    left: 60px;
+    top: 60px;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    cursor: grab;
+    border-radius: 8px;
+  display: flex;
+  z-index: 2;
+}
+
+.nerdy.dragging {
+    cursor: grabbing;
+    opacity: .9;
+    scale: 1.3;
+}
+
+
 /*LE TITRE PORTFOLIO*/
 .tremblement {
   display: flex;
   justify-content: center;
   margin-top: 30vh;
   margin-left: 100px;
+  z-index: 0;
 }
 .tremblement span{
     transition: all 500ms;
     color: rgb(0, 0, 0);
     font: 10rem "Impact", sans-serif;
     display: inline-block;
-    text-shadow: rgba(0, 0, 0, 0.145) 10px 9px 9px;
+    text-shadow: rgba(0, 0, 0, 0.308) 10px 9px 9px;
     margin: auto;
 }
 
@@ -546,18 +602,57 @@ section {
 }
 
 /* DEBUT CAROUSSEL POUR PROJEEEEEEEEEEEEEEEEEEEEEEET */
-.titri {
-  font: 3rem "Impact", sans-serif;
-  color: #000;
-}
+/* la phrase d'accroche qui accroche prsn */
+  #monTitre {
+    font: 4.5rem "Impact", sans-serif;
+    font-weight: bold;
+    text-shadow: rgba(0, 0, 0, 0.308) 10px 9px 9px;
+    display: inline-block;
+    cursor: pointer;
+    user-select: none;
+    z-index: 1;
+    text-align: center;
+    cursor: url("curspen2.svg") 24 24, pointer;
+  }
+
+  #monTitre .lettre {
+    display: inline-block;
+    transition: transform 0.2s ease, color 0.2s ease, text-shadow 0.2s ease;
+    cursor: url("curspen2.svg") 24 24, pointer;
+  }
+
+  /* le hover : effet glitch */
+  #monTitre:hover .lettre {
+    color: #e6567a;
+    transform: translateX(-2px) skewX(5deg);
+    text-shadow: -1px 3px #6d293a, rgba(0, 0, 0, 0.308) 10px 9px 9px;
+    cursor: url("curspen.svg") 24 24, pointer;
+  }
+
+  /* Décalage pour effet vague */
+  #monTitre .lettre:nth-child(1) { transition-delay: 0s; }
+  #monTitre .lettre:nth-child(2) { transition-delay: 0.03s; }
+  #monTitre .lettre:nth-child(3) { transition-delay: 0.06s; }
+  #monTitre .lettre:nth-child(4) { transition-delay: 0.09s; }
+  #monTitre .lettre:nth-child(5) { transition-delay: 0.12s; }
+  #monTitre .lettre:nth-child(6) { transition-delay: 0.15s; }
+  #monTitre .lettre:nth-child(7) { transition-delay: 0.18s; }
+  #monTitre .lettre:nth-child(8) { transition-delay: 0.21s; }
+  #monTitre .lettre:nth-child(9) { transition-delay: 0.24s; }
+  #monTitre .lettre:nth-child(10) { transition-delay: 0.27s; }
+  #monTitre .lettre:nth-child(11) { transition-delay: 0.3s; }
+  #monTitre .lettre:nth-child(12) { transition-delay: 0.33s; }
+  #monTitre .lettre:nth-child(13) { transition-delay: 0.36s; }
+  #monTitre .lettre:nth-child(14) { transition-delay: 0.39s; }
+  #monTitre .lettre:nth-child(15) { transition-delay: 0.42s; }
+
 /*source : Logto sur google*/ 
   .carousel {
-    top: 0;
     padding: 20px 0;
     max-width: 100%;
     overflow: hidden;
     display: flex;
-    margin-bottom: 200px;
+    margin-top: 100px;
   }
 
   .card:hover {
@@ -583,19 +678,19 @@ section {
     }
 
     &:nth-child(1) {
-      background: #ffffff0d;
+    background: #ffffff0d;
     }
 
     &:nth-child(2) {
-     background: #ffffff0d;
+    background: #ffffff0d;
     }
 
     &:nth-child(3) {
-      background: #ffffff0d;
+    background: #ffffff0d;
     }
 
-     &:nth-child(4) {
-      background: #ffffff0d;
+    &:nth-child(4) {
+    background: #ffffff0d;
     }
 
   }
@@ -624,7 +719,7 @@ section {
     }
     100% {
       transform: translateX(-100%);
-    }
+    } 
   }
 
     .carousel {
@@ -634,227 +729,9 @@ section {
     }
 
   }
-
 /*TOUJOURS DANS PRROOJEEEEEEEEEEEEEEEEEEEEEEEEEEEEET*/
+  
 /*présenter 3 projets pas plus*/
-  .container {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        h1 {
-            text-align: center;
-            color: white;
-            font: 3rem "Impact", sans-serif;
-            margin-bottom: 20px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-            font: 1em impsans-serif;
-        }
-
-        .subtitle {
-            text-align: center;
-            color: rgba(255,255,255,0.9);
-            font-size: 1.2em;
-            margin-bottom: 50px;
-        }
-
-        .portfolio-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin-bottom: 30px;
-        }
-
-        .project-card {
-            position: relative;
-            border-radius: 20px;
-            overflow: hidden;
-            cursor: pointer;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            background: rgba(255, 255, 255, 0.267);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-        }
-
-        .project-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
-            cursor: url("curspen.svg") 24 24, pointer;
-        }
-
-        .project-image { /*la minia du bouton*/
-            width: 100%;
-            height: 250px;
-            object-fit: cover;
-            background-color: #F7F7F8;            
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 4em;
-        }
-
-        .project-preview {
-            padding: 15px;
-        }
-
-        .project-title { /* titre */
-            font: 1.5rem "Impact", sans-serif;
-            color: #000000;
-        }
-
-        .project-summary { /*texte*/
-            color: #666;
-            line-height: 1.6;
-            margin-bottom: 15px;
-            font-family: "ShinGoProRegular", sans-serif;
-        }
-
-        .view-more {  /* text voir plus */
-            display: inline-block;
-            color: #E6567A;
-            font-weight: 600;
-            text-decoration: none;
-            transition: color 0.3s ease;
-            font: 1.2rem "Impact", sans-serif;
-
-        }
-
-        .view-more:hover {
-            color: #ff0040;
-        }
-
-        /* Modal pour les détails */
-        .modal {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0,0,0,0.8);
-            z-index: 1000;
-            justify-content: center;
-            align-items: center;
-            padding: 20px;
-            animation: fadeIn 0.3s ease;
-            font: 1rem "Impact", sans-serif;
-        }
-
-        .modal.active {
-            display: flex;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-
-        .modal-content {
-            background: white;
-            border-radius: 20px;
-            max-width: 900px;
-            width: 100%;
-            max-height: 90vh;
-            overflow-y: auto;
-            position: relative;
-            animation: slideUp 0.4s ease;
-        }
-
-        @keyframes slideUp {
-            from {
-                transform: translateY(50px);
-                opacity: 0;
-            }
-            to {
-                transform: translateY(0);
-                opacity: 1;
-            }
-        }
-
-        .modal-header {
-            position: relative;
-            height: 300px;
-            background-color: #ffffff;            
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 5em;
-            color: white;
-        }
-
-        .close-btn {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            width: 40px;
-            height: 40px;
-            background:  #ffc3be;
-            border: none;
-            border-radius: 50%;
-            font-size: 24px;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: transform 0.2s ease;
-            z-index: 10;
-        }
-
-        .close-btn:hover {
-            transform: rotate(90deg);
-            background: #EE8279;
-            transition: all ease-in 0.6s;
-            cursor: url("curspen.svg") 24 24, pointer;
-            color: #ffffff;
-        }
-
-        .modal-body {
-            padding: 40px;
-        }
-
-        .modal-title {
-            font-size: 2.5em;
-            color: #000000;
-            margin-bottom: 20px;
-        }
-
-        .modal-meta {
-            display: flex;
-            gap: 20px;
-            margin-bottom: 30px;
-            flex-wrap: wrap;
-        }
-
-        .meta-item { /*supprimé*/
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            color: #ff0000;
-            font-size: 0.95em;
-        }
-
-        .modal-description {
-            color: #252525;
-            line-height: 1.8;
-            font-size: 1.1em;
-            margin-bottom: 30px;
-            font-family: "ShinGoProRegular", sans-serif;
-        }
-
-        .tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            margin-bottom: 30px;
-        }
-
-        .tag /*les types en mode pokémon*/{
-          border: solid 1px #000;
-            background: linear-gradient(135deg, #ffbeb8 0%, #ffd4b3 100%);
-            color: rgb(0, 0, 0);
-            padding: 8px 16px;
-            border-radius: 20px;
-            font-size: 0.9em;
-        }
 
 /* FIN POUR PROJEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEET */
 
