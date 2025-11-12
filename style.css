@@ -193,8 +193,8 @@ section {
 .tremblement {
   display: flex;
   justify-content: center;
+  align-items: center;
   margin-top: 30vh;
-  margin-left: 100px;
   z-index: 0;
 }
 .tremblement span{
@@ -224,40 +224,6 @@ section {
     }
 }
 
-/*MON BOUTTTTOOONNN CCCVVVVVVVVVVVVVVVVV*/
-.styled {
-  font: 1.5rem "Impact", sans-serif;
-  border: 0;
-  line-height: 2.5;
-  padding: 0 20;
-  color: #000000;
-  text-align: center;
-  text-shadow: 1px 1px 1px #ffffff;
-  border-radius: 20px;
-  background-color: rgba(255, 255, 255, 0.544);
-  box-shadow: inset 2px 2px 3px #f6af7863,
-    inset -2px -2px 3px rgb(255, 255, 255);
-  width: 100%;
-  margin: auto;
-  cursor: url("curspen.svg") 24 24, pointer;
-  transition: all 0.7 ease;
-  margin-bottom: 1.5rem;
-}
-
-.styled:hover {
-  background-color: rgba(41, 41, 41, 0.275);
-  box-shadow: inset 2px 2px 3px rgb(255, 255, 255), inset -2px -2px 3px#f6af7863;
-  transition: all 0.7s ease;
-  text-shadow: 1px 1px 1px #000000;
-  color: #ffffff;
-}
-
-.styled:active {
-  box-shadow: inset -2px -2px 3px rgba(255, 255, 255, 0.6),
-    inset 1 px 2px 3px rgba(0, 0, 0, 0.3);
-  transition: all 0.9s;
-}
-/*FIN DEEE MON BOUTTTTOOONNN CCCVVVVVVVVVVVVVVVVV*/
 
 /*chargement du début juste pour prouver*/
 .loader-wrapper {
@@ -449,6 +415,45 @@ section {
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.087);
 }
 
+/*MON BOUTTTTOOONNN CCCVVVVVVVVVVVVVVVVV*/
+.styled {
+  font: 1.5rem "Impact", sans-serif;
+  border: 0;
+  line-height: 2.5;
+  padding: 0 20;
+  color: #ffffff;
+  text-align: center;
+  text-shadow: 1px 1px 1px #000000;
+  border-radius: 20px;
+  background-color: #ee83799a;
+  box-shadow: inset 2px 2px 3px rgb(255, 255, 255), inset -2px -2px 3px#ffffff;
+  width: 100%;
+  margin: auto;
+  cursor: url("curspen.svg") 24 24, pointer;
+  transition: all 0.7 ease;
+  margin-bottom: 1.5rem;
+}
+
+.styled:hover {
+  background-color: rgba(255, 255, 255, 0.544);
+  box-shadow: inset 2px 2px 3px #ee8279,
+  inset -2px -2px 3px #ee8279;
+  transition: all 0.7s ease;
+  text-shadow: 1px 1px 1px #ffffff;
+  color: #ee8279;
+  transform: translateY(-5px);
+  box-shadow: #ee8279 5px 5px 20px 0;
+
+}
+
+.styled:active {
+  box-shadow: inset -2px -2px 3px rgba(255, 255, 255, 0.6),
+    inset 1 px 2px 3px rgba(0, 0, 0, 0.3);
+  transition: all 0.9s;
+}
+/*FIN DEEE MON BOUTTTTOOONNN CCCVVVVVVVVVVVVVVVVV*/
+
+
 /* LE GRID POUR LA PARTIR PROPOS DE MOI */
 
 .portfolio-section {
@@ -604,7 +609,7 @@ section {
 /* DEBUT CAROUSSEL POUR PROJEEEEEEEEEEEEEEEEEEEEEEET */
 /* la phrase d'accroche qui accroche prsn */
   #monTitre {
-    font: 4.5rem "Impact", sans-serif;
+    font: 5rem "Impact", sans-serif;
     font-weight: bold;
     text-shadow: rgba(0, 0, 0, 0.308) 10px 9px 9px;
     display: inline-block;
@@ -613,6 +618,7 @@ section {
     z-index: 1;
     text-align: center;
     cursor: url("curspen2.svg") 24 24, pointer;
+    margin-top: 150px;
   }
 
   #monTitre .lettre {
