@@ -62,7 +62,7 @@ section {
 
 #projets {
   background: linear-gradient(145deg, #ffffff 50%, #f6ae78 120%);
-    padding: 60px 20px 2100px;
+    padding: 60px 20px 3350px;
 }
 
 #contact {
@@ -380,7 +380,7 @@ section {
   margin-left: 10px;
   display: flex;
 }
- @media (max-width: 844px) {
+ @media (max-width: 980px) {
             .salut {
                 font: 1rem "Impact", sans-serif;
             }
@@ -388,12 +388,12 @@ section {
 .blabla1 {
   font-family: "ShinGoProRegular", sans-serif;
   margin-left: 10px;
-  font-size: large;
+  font-size: xx-large;
 }
- @media (max-width: 844px) {
+ @media (max-width: 980px) {
             .blabla1 {
                 font-family: "ShinGoProRegular", sans-serif;
-                font-size: xx-small;
+                font-size: small;
             }
             }
           
@@ -725,15 +725,15 @@ section {
 
   .group {
     will-change: transform; 
-    animation: scrolling 60s linear infinite;
+    animation: droite 20s linear infinite;
   }
 
-  @keyframes scrolling {
+  @keyframes droite {
     0% {
-      transform: translateX(0);
+      transform: translateX(-100%);
     }
     100% {
-      transform: translateX(-100%);
+      transform: translateX(0);
     } 
   }
 
@@ -745,7 +745,17 @@ section {
 
   }
 /*TOUJOURS DANS PRROOJEEEEEEEEEEEEEEEEEEEEEEEEEEEEET*/
-/*présenter 4 projets pas plus*/
+ .titreProjet {
+    font: 5rem "Impact", sans-serif;
+    font-weight: bold;
+    text-shadow: rgba(0, 0, 0, 0.308) 10px 9px 9px;
+    user-select: none;
+    z-index: 1;
+    text-align: center;
+    cursor: url("curspen2.svg") 24 24, pointer;
+  }
+
+/*présenter 3 projets pas plus*/
         .projects-wrapper {
             max-width: 1500px;
             margin: 0 auto;
@@ -783,6 +793,9 @@ section {
         }
 
         /* PROJECT 2: 2 logos droite + 1 grande image + 1 texte*/
+        .showclik {
+        cursor: url("curspen.svg") 24 24, pointer;
+        }
             .project-layout-type2 {
             grid-template-columns: 1fr 1fr 100px;
             grid-template-rows: 1fr 1fr;
@@ -816,24 +829,6 @@ section {
 
         .project-layout-type3 .project-photo-large {
             grid-row: 1 / 3;
-        }
-
-                /* PROJECT 4: 2 logos droite + 1 grande image + 1 texte*/
-            .project-layout-type4 {
-            grid-template-columns: 1fr 1fr 100px;
-            grid-template-rows: 1fr 1fr;
-        }
-
-        .project-layout-type4 .project-photo-large {
-            grid-row: 1 / 3;
-        }
-
-        .project-layout-type4 .project-brand-stack {
-            grid-column: 3;
-            grid-row: 1 / 3;
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
         }
 
         /* Éléments de base */
@@ -933,6 +928,99 @@ section {
             }
         }
 /* FIN POUR PROJEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEET */
+
+ .titreStage {
+    font: 5rem "Impact", sans-serif;
+    font-weight: bold;
+    text-shadow: rgba(0, 0, 0, 0.308) 10px 9px 9px;
+    user-select: none;
+    z-index: 1;
+    text-align: center;
+  }
+
+/*SECOND CAROUSEL*/ 
+  .carousel2 {
+    padding: 20px 0;
+    max-width: 100%;
+    overflow: hidden;
+    display: flex;
+    margin-top: 100px;
+  }
+
+  .card2:hover {
+  transform: translateY(-3px);
+  box-shadow: rgba(0, 0, 0, 0.324) 5px 5px 20px 0;
+  transition: all ease-in-out 0.3s;
+  }
+
+  .card2 {
+    width:100%;
+    color: white;
+    border-radius: 24px;
+    padding: 20px;
+    font-size: xx-large;
+    justify-content: center;
+    align-items: center;
+    min-height: 100px;
+
+    .photo {
+      border-radius: 20px;
+      max-width: 200px;
+    }
+
+    &:nth-child(1) {
+    background: #00000000;
+    }
+
+    &:nth-child(2) {
+    background: #00000000;
+    }
+
+    &:nth-child(3) {
+    background: #00000000;
+    }
+
+    &:nth-child(4) {
+    background: #00000000;
+    }
+
+  }
+
+    .carousel2 {
+    > * {
+      flex: 0 0 100%;
+    }
+  }
+
+  .group2 {
+    display: flex;
+    gap: 20px;
+    padding-right: 20px;
+    height: 200px;
+  }
+
+  .group2 {
+    will-change: transform; 
+    animation: gauche 20s linear infinite;
+  }
+
+  @keyframes gauche {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    } 
+  }
+
+    .carousel2 {
+    /* ... */
+    &:hover .group2 {
+      animation-play-state: paused;
+    }
+
+  }
+
 /* LE MAIL POUR CONTACCCCCTTTTTTTTTTTTTTTTTTTTTTTTTTTT */
 
 .contact-section {
