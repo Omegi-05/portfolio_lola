@@ -62,7 +62,7 @@ section {
 
 #projets {
   background: linear-gradient(145deg, #ffffff 50%, #f6ae78 120%);
-    padding: 60px 20px 600px;
+    padding: 60px 20px 2100px;
 }
 
 #contact {
@@ -378,13 +378,25 @@ section {
 .salut {
   font: 1.8rem "Impact", sans-serif;
   margin-left: 10px;
+  display: flex;
 }
-
+ @media (max-width: 844px) {
+            .salut {
+                font: 1rem "Impact", sans-serif;
+            }
+          }
 .blabla1 {
-  
   font-family: "ShinGoProRegular", sans-serif;
   margin-left: 10px;
+  font-size: large;
 }
+ @media (max-width: 844px) {
+            .blabla1 {
+                font-family: "ShinGoProRegular", sans-serif;
+                font-size: xx-small;
+            }
+            }
+          
 .perso3text {
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
@@ -452,8 +464,6 @@ section {
   transition: all 0.9s;
 }
 /*FIN DEEE MON BOUTTTTOOONNN CCCVVVVVVVVVVVVVVVVV*/
-
-
 /* LE GRID POUR LA PARTIR PROPOS DE MOI */
 
 .portfolio-section {
@@ -605,7 +615,6 @@ section {
     grid-row: span 1;
   }
 }
-
 /* DEBUT CAROUSSEL POUR PROJEEEEEEEEEEEEEEEEEEEEEEET */
 /* la phrase d'accroche qui accroche prsn */
   #monTitre {
@@ -736,12 +745,196 @@ section {
 
   }
 /*TOUJOURS DANS PRROOJEEEEEEEEEEEEEEEEEEEEEEEEEEEEET*/
-  
-/*présenter 3 projets pas plus*/
+/*présenter 4 projets pas plus*/
+        .projects-wrapper {
+            max-width: 1500px;
+            margin: 0 auto;
+        }
 
+        .project-single-card {
+            background: rgba(255, 255, 255, 0.308);
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 40px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        .project-grid-container {
+            display: grid;
+            gap: 20px;
+        }
+
+        /* PROJECT 1: 2 logos gauche + 1 grande image + 1 texte*/
+        .project-layout-type1 {
+            grid-template-columns: 100px 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+        }
+
+        .project-layout-type1 .project-brand-stack {
+            grid-column: 1;
+            grid-row: 1 / 3;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .project-layout-type1 .project-photo-large {
+            grid-row: 1 / 3;
+        }
+
+        /* PROJECT 2: 2 logos droite + 1 grande image + 1 texte*/
+            .project-layout-type2 {
+            grid-template-columns: 1fr 1fr 100px;
+            grid-template-rows: 1fr 1fr;
+        }
+
+        .project-layout-type2 .project-photo-large {
+            grid-row: 1 / 3;
+        }
+
+        .project-layout-type2 .project-brand-stack {
+            grid-column: 3;
+            grid-row: 1 / 3;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        /* PROJECT 3: 2 logos gauche + 1 grande image + 1 texte*/
+        .project-layout-type3 {
+            grid-template-columns: 100px 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+        }
+
+        .project-layout-type3 .project-brand-stack {
+            grid-column: 1;
+            grid-row: 1 / 3;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .project-layout-type3 .project-photo-large {
+            grid-row: 1 / 3;
+        }
+
+                /* PROJECT 4: 2 logos droite + 1 grande image + 1 texte*/
+            .project-layout-type4 {
+            grid-template-columns: 1fr 1fr 100px;
+            grid-template-rows: 1fr 1fr;
+        }
+
+        .project-layout-type4 .project-photo-large {
+            grid-row: 1 / 3;
+        }
+
+        .project-layout-type4 .project-brand-stack {
+            grid-column: 3;
+            grid-row: 1 / 3;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        /* Éléments de base */
+        .project-brand-element {
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 14px;
+            min-height: 80px;
+            transition: transform 0.3s ease;
+        }
+
+        .project-brand-element:hover {
+            transform: scale(1.05);
+        }
+
+        .project-photo-item {
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 150px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            color: #000000;
+            font-family: "ShinGoProRegular", sans-serif;
+        }
+
+        .project-photo-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(255, 107, 107, 0.3);
+        }
+
+        .project-photo-item::after {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 24px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .project-photo-item:hover::after {
+            opacity: 0.7;
+        }
+
+        .project-text-content {
+            background: linear-gradient(135deg, #ffd4d4, #ffe0e0);
+            border: 3px solid #ffffff;
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #333;
+            font-weight: bold;
+            min-height: 150px;
+            transition: all 0.3s ease;
+        }
+
+        .project-text-content:hover {
+            background: linear-gradient(135deg, #ffe0e0, #fff0f0);
+        }
+
+        .project-main-title {
+            color: white;
+            margin-bottom: 20px;
+            font-size: 28px;
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            .project-layout-type1,
+            .project-layout-type2,
+            .project-layout-type3,
+            .project-layout-type4 {
+                grid-template-columns: 1fr;
+                grid-template-rows: auto;
+            }
+
+            .project-layout-type1 .project-brand-stack,
+            .project-layout-type2 .project-brand-stack,
+            .project-layout-type3 .project-brand-stack,
+            .project-layout-type4 .project-brand-stack {
+                grid-column: 1;
+                grid-row: auto;
+                flex-direction: row;
+            }
+            .project-layout-type1 .project-photo-large,
+            .project-layout-type2 .project-photo-large,
+            .project-layout-type3 .project-photo-large,
+            .project-layout-type4 .project-photo-large{
+                grid-row: auto;
+            }
+        }
 /* FIN POUR PROJEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEET */
-
 /* LE MAIL POUR CONTACCCCCTTTTTTTTTTTTTTTTTTTTTTTTTTTT */
+
 .contact-section {
   /* le titre, bloc blanc */
   background: rgba(255, 255, 255, 0.391);
